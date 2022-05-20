@@ -1,0 +1,17 @@
+#include <linkbot.h>
+
+CLinkbotI robot;
+double radius = 1.75;
+double trackwidth = 3.69;
+
+int start;
+
+printf("How far would you like to start (in inches)?\nIn between 1-36:\n");
+scanf("%i", &start);
+robot.setSpeed(6, radius);
+robot.driveDistance(start-2, radius);
+
+robot.delaySeconds(1);
+
+robot.setSpeed(6, radius);
+robot.driveDistance(8, radius);
